@@ -6,8 +6,8 @@ const routes: Routes = [
   {
     path: '',
     children: [
-      { path: 'product', component: ProductPageComponent },
-      { path: '**', redirectTo: 'product' }
+      { path: '', component: ProductPageComponent },
+      { path: '**', redirectTo: '' }
     ]
   }
 ];
