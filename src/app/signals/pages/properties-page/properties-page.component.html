@@ -1,1 +1,26 @@
-<p>properties-page works!</p>
+<h1>Mutaciones</h1>
+
+<hr>
+
+
+<div class="row">
+  <div class="col-6">
+
+    <input #txtEmail type="email" class="mb-2 form-control" [value]="user().email"
+      (input)="onEmailChange('email', txtEmail.value)" />
+
+    <input #txtFirstName type="text" class="mb-2 form-control" [value]="user().first_name"
+      (input)="onEmailChange('first_name', txtFirstName.value)" />
+
+    <input #txtLastName type="text" class="mb-2 form-control" [value]="user().last_name"
+      (input)="onEmailChange('last_name', txtLastName.value)" />
+  </div>
+  <div class="col-6">
+    <!-- DATOS DEL USUARIO -->
+    <pre>{{ user() | json }}</pre>
+
+    <pre>{{ fullName() }}</pre>
+    <button class="btn btn-primary" (click)="changeCounter(+1)">+1</button>
+  </div>
+
+</div>
